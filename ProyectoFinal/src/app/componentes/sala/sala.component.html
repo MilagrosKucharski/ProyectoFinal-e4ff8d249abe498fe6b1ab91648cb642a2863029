@@ -1,0 +1,61 @@
+<app-header></app-header>
+
+<div class="salaLogBody" *ngIf="!enSala && !empezo" >
+    <div class="salaCode">
+        <label for="salaCode">Introduzca el codigo de la sala: </label>
+        <input #codigo>
+    </div>
+    <button id="salaButton" class="btn btn-danger" (click)="ingresar(codigo.value)"> Ingresar</button>
+</div>
+
+<div class="selectSala2" *ngIf="enSala && !empezo">
+    <h4 class="centered-text">Entraste a la sala "{{SalaActiva.nombre}}" espere a que administrador inicie el juego</h4>
+</div>
+
+<div *ngIf="enSala && empezo">
+    <div *ngFor="let Actividad of Actividades">
+        <div class="card cardContainer" *ngIf="Actividades[contador] == Actividad">
+            <div class="card-body">
+                <h5 class="card-title">{{Actividad.titulo}}</h5>
+                <p class="card-text">{{Actividad.descripcion}}</p>
+                <div>
+                    <button type="button" class="btn btn-danger" (click)="votarMegusta(Actividad.id)">Me gusta</button>
+                    <span>&nbsp;</span>
+                    <button type="button" class="btn btn-danger" (click)="votarMedaigual(Actividad.id)">Me da igual</button>
+                    <span>&nbsp;</span>
+                    <button type="button" class="btn btn-danger" (click)="votarNoMegusta(Actividad.id)">No me gusta</button>
+                </div>
+                <div class="timer">
+                    {{display}}
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="card activityResult" *ngIf="contador == Actividades.length">
+        <h5>Ganaron las actividades:</h5>
+        <div>
+            <div class="card cardWinner">
+                <div class="card-body">
+                    <h5 class="card-title"> {{MayorPuntajeAct.titulo}}</h5>
+                    <p class="card-text"> {{MayorPuntajeAct.descripcion}}</p>
+                    <p class="card-text">Puntaje: {{MayorPuntaje}}</p>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="card activityResult" *ngIf="contador == Actividades.length">
+
+    <h5 *ngIf="contador == Actividades.length">Resultados:</h5>
+        <div *ngFor="let Actividad of Actividades; index as i">
+            <div class="card cardConainer">
+                <div class="card-body">
+                    <h5 class="card-title">{{Actividad.titulo}}</h5>
+                    <p class="card-text">{{Actividad.descripcion}}</p>
+                    <p class="card-text">Puntaje: {{Puntaje[i]}}</p>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<app-footer></app-footer>

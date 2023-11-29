@@ -1,0 +1,21 @@
+<app-header></app-header>
+
+
+
+<div class="loginBody">
+    <h5>Login de Usuarios</h5>
+    <div class="loginName">
+        <label for="nombre">Nombre de usuario: </label>
+        <input #nombre>
+    </div>
+
+    <div class="loginPass">
+        <label for="contraseña">Contraseña: </label>
+        <input type="password" #contrasenia>
+    </div>
+
+    <button id="loginButton" type="button" class="btn btn-danger" (click)="login(nombre.value, contrasenia.value)">login</button>
+                                           <!-- class="btn btn-light" -->
+</div>
+
+<app-footer></app-footer>

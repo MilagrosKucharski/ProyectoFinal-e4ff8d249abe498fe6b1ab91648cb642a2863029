@@ -1,0 +1,21 @@
+<app-header></app-header>
+
+
+
+<div class="registerBody">
+    <h5>Registro de Usuarios</h5>
+    <div class="registerName">
+        <label for="nombre">Nombre de usuario: </label>
+        <input #nombre>
+    </div>
+    
+    <div class="registerPass">
+        <label for="contraseña">Contraseña: </label>
+        <input #contrasenia>
+    </div>
+    
+    <button id="registerButton" type="button" class="btn btn-light" (click)="register(nombre.value, contrasenia.value)">Sign Up</button>
+    
+</div>
+
+<app-footer></app-footer>

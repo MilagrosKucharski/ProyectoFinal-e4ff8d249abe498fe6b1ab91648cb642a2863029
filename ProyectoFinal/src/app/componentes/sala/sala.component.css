@@ -1,0 +1,76 @@
+.selectSala2 {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.centered-text {
+    text-align: center;
+}
+
+.salaLogBody{
+    margin-left: 10px;
+}
+
+.salaCode {
+    padding-bottom: 5px;
+    display: flex;
+    align-items: flex-start; /* Alinea los elementos verticalmente en la parte superior */
+}
+
+.salaCode label {
+    margin-right: 10px; /* Agrega un margen derecho para separar la etiqueta del input */
+}
+
+.userName {
+    padding-bottom: 5px;
+    display: flex;
+    align-items: flex-start; /* Alinea los elementos verticalmente en la parte superior */
+}
+
+.userName label {
+    margin-right: 91px; /* Agrega un margen derecho para separar la etiqueta del input */
+}
+
+input {
+    border-radius: 5px; /* Ajusta el valor según la cantidad de redondez que desees */
+    border: 1px solid black; /* Ancho, estilo (solid), color */
+}
+
+#salaButton{
+    margin-left: 331px;
+}
+
+.cardContainer {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 20px;
+    margin: 0 auto;
+    width: 80%; /* Ajusta el ancho según tus preferencias */
+    max-width: 600px; /* Establece un ancho máximo para mantener la responsividad */
+    margin-bottom: 20px; /* Ajusta el valor según la separación deseada */
+  }  
+
+  .activityResult{
+    background-color: transparent;
+    border: solid transparent;
+  }
+  .cardWinner{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 20px;
+    margin: 0 auto;
+    width: 80%; /* Ajusta el ancho según tus preferencias */
+    max-width: 600px; /* Establece un ancho máximo para mantener la responsividad */
+    margin-bottom: 20px; /* Ajusta el valor según la separación deseada */
+    background-color: rgb(122, 231, 126);
+  }
+  .timer{
+    display: flex;
+    justify-content: center;
+    margin-top: 10px;
+  }
